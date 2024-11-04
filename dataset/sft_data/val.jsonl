@@ -1,0 +1,50 @@
+{"question": "RPC 及 HA 服务中，verbose 参数的设置有几个级别？", "response": "三个级别（0，1，2）。"}
+{"question": "在磁盘IO监控的配置中，当哪个值大于10000时会触发危急颜色模式？", "response": "value大于10000时。"}
+{"question": "`FieldData` 类中的函数 `IsReal()` 是用来查询什么类型的数据？", "response": "`IsReal()` 用来查询是否是 `FLOAT` 或 `DOUBLE` 类型的数据。"}
+{"question": "如果成功修改一个用户的描述，应返回什么状态码？  ", "response": "200"}
+{"question": "边关联的两个点的字段，一定是点的主键吗？", "response": "是的"}
+{"question": "OutEdgeIterator 类的 Delete 方法执行什么操作？", "response": "Deletes current edge. The iterator will point to the next out edge if there is any."}
+{"question": "TuGraph-DB的日志等级如何调整？", "response": "单机模式下，调整配置文件src/server/lgraph_standalone.json，其中verbose配置项控制日志等级，verbose可以设置为0,1,2，对应日志等级可以参考src/server/lgraph_server.cpp中115行至128行。"}
+{"question": "机器性能指标中的“memory”是什么？", "response": "“memory”是内存，是用于监控服务性能的重要指标之一。"}
+{"question": "如果不选择清空画布数据按钮，导入的数据会如何处理？", "response": "每次执行查询的结果会追加至画布区域。"}
+{"question": "如何通过邮件提出关于TuGraph产品的建议？", "response": "邮件地址为tugraph@service.alipay.com。"}
+{"question": "边索引支持查询加速么？", "response": "暂不支持"}
+{"question": "TuGraph Monitor的主要功能是什么？", "response": "TuGraph Monitor负责收集性能指标并将数据包装为Prometheus可以使用的格式。"}
+{"question": "TuGraph HA 集群的管理工具是什么？", "response": "管理工具为lgraph_peer。"}
+{"question": "如何通过POST方法修改Token的有效期为无限期？", "response": "通过设置refresh_time和expire_time参数均为0。"}
+{"question": "TuGraph图数据库是由哪两个机构联合研发的？", "response": "蚂蚁集团与清华大学联合研发的。"}
+{"question": "TuGraph图学习模块依赖于什么系统？", "response": "它依赖于TuGraph的数据库管理系统。"}
+{"question": "构造FieldSpec时需要哪些参数？", "response": "需要字段名称、字段类型和一个布尔值标识字段是否可选。"}
+{"question": "TuGraph DB的并发性能优化最初面临的主要问题是什么？", "response": "Antlr4 C++ target的并发性能不足以支持所需的超高并发GQL请求。"}
+{"question": "C++客户端中实例化单节点client对象需要哪些参数？", "response": "需要url（如\"127.0.0.1:19099\"）、user（如\"admin\"）和password（如\"73@TuGraph\"）。"}
+{"question": "TuGraph-DB查询引擎目前支持使用哪种查询语言，并计划在未来支持哪种查询语言？", "response": "目前，TuGraph-DB支持使用Open Cypher作为查询语言，即将支持ISO GQL查询语言。"}
+{"question": "DeleteProcedure 函数接受什么类型的参数，并命名它们？", "response": "接受 std::string &result, const std::string &procedure_type, const std::string &procedure_name, const std::string &graph。"}
+{"question": "如果要在FrontierTraversal中并行执行遍历，事务的哪种模式必须被选用？", "response": "事务必须是只读的。"}
+{"question": "RpcSingleClient 构造函数需要哪些参数?", "response": "url, user, password。"}
+{"question": "TuGraph“中的expire_time默认设置是？", "response": "expire_time实体定义为强制过期时间戳，默认设置为24小时。"}
+{"question": "TuGraph图学习模块中包括哪四种采样算子？", "response": "Neighbor Sampling、Edge Sampling、Random Walk Sampling 和 Negative Sampling。"}
+{"question": "当执行UpsertEdge操作时，根据提供的参数是否存在于现有边，返回值将是什么？", "response": "如果边已存在，则返回False；如果新建了边，则返回True。"}
+{"question": "ANTLR4支持生成哪些目标语言的解析器？", "response": "ANTLR4支持生成Java、Python、C++、JavaScript、Go等10种目标语言的解析器。"}
+{"question": "如果对DateTime对象添加超出其范围的微秒数会发生什么？", "response": "抛出OutOfRange异常。"}
+{"question": "VertexLockGuard是什么？", "response": "VertexLockGuard是一个机制，用于控制程序对点数据的访存权限。"}
+{"question": "value pack时的null array的具体含义是什么？", "response": "标记field是否为空"}
+{"question": "tugraph支持边属性匹配吗？，MATCH (n:chunk {id: '21604c19-0d30-11ef-b83b-0242ac110005'})-[r:kw {name:\"生活补贴\"}]-(m) RETURN n, r, m 类似这种cypher 为啥不能过滤边属性？", "response": "可以写where语句进行过滤"}
+{"question": "TuGraph是如何通过语句定义点类型和边类型的？", "response": "点类型通过调用 `db.createVertexLabelByJson` 创建，边类型通过 `db.createEdgeLabelByJson` 创建。"}
+{"question": "想问一下，如果log_dir不设置，是不是就不会保存日志文件?", "response": "是的，如果指定log_dir为\"\"，再以后台运行方式启动server，就不会生成log了。如开debug了确实会频繁刷日志。日志是滚动生成的，超过256M就会生成一个新的日志文件，之前的日志文件就可以删了，可以手动清理。"}
+{"question": "当调用算法 `algo.shortestPath` 实际应用中的例子是什么？", "response": "MATCH (n1 {name:'Hugo Weaving'}),(n2 {title:'The Matrix'}) CALL algo.shortestPath(n1,n2) YIELD nodeCount,totalCost RETURN nodeCount,totalCost"}
+{"question": "方法 GetLabel() 返回什么类型的结果？", "response": "The label."}
+{"question": "Rust 存储过程目前支持哪个版本？", "response": "目前仅支持v1版本。"}
+{"question": "TuGraph单元测试使用的是什么测试框架？", "response": "TuGraph单元测试采用gtest框架。"}
+{"question": "创建 Label 的请求是否需要指定该 Label 是否为点（vertex）或边（relationship）？", "response": "是的，需要指定。"}
+{"question": "TuGraph 中使用的两种主要图分析操作是什么？", "response": "简单图分析操作和复杂图分析操作。"}
+{"question": "TuGraph-DB如何在代码中增加日志输出埋点？", "response": "首先在需要添加埋点的代码文件中增加#include \"tools/lgraph_log.h\"，之后使用LOG_DEBUG()、LOG_INFO()、LOG_WARN()、LOG_ERROR()、LOG_FATAL()等日志宏输出对应等级的，具体使用方法参考test/test_lgraph_log.cpp测试文件"}
+{"question": "在删除边的全文索引时，如果边标签或字段不存在会抛出什么异常？", "response": "InputError。"}
+{"question": "Grafana主要用于什么？", "response": "Grafana主要用于服务性能指标的监控和可视化。"}
+{"question": "DeleteProcedure 函数是用来执行什么操作的？", "response": "执行用户定义的程序。"}
+{"question": "描绘 PairUniqueIndex 的钥匙生成形式是什么？", "response": "如果 src_vid < dst_vid, 关键是 (index field value + src_vid + dst_vid); 如果 src_vid > dst_vid, 关键是 (index field value + dst_vid + src_vid)。"}
+{"question": "在上述文本中，类FieldData用于表示哪些类型的数据？", "response": "FieldData用于表示布尔、整型、浮点数、双精度浮点数、字符串、日期、时间、点、线串、多边形、空间数据、浮点向量以及BLOB数据。"}
+{"question": "在线全量导入TuGraph时，如果发生数据包错误，默认行为是什么？", "response": "默认行为是在第一个错误包处停止导入。"}
+{"question": "ORDER BY在GQL中有什么作用？", "response": "ORDER BY是GQL子句的一部分，用于对查询结果进行排序。"}
+{"question": "TuGraph-DB是否有http的接口？对应的接口代码在哪里？", "response": "TuGraph-DB有2套http的接口，分别在src/restful/server/rest_server.cpp和src/http/http_server.cpp"}
+{"question": "请问lgraph_peer工具是只有编译方式部署后才有吗？", "response": "是的，后面我们会加入rpm中，目前编译部署后可以使用lgraph_peer"}
+{"question": "当前图数据库应用程序使用的CPU比率是多少？", "response": "25%"}
